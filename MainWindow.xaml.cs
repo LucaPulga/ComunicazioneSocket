@@ -43,6 +43,7 @@ namespace ComunicazioneSocket
             IPEndPoint localEndPointAutomated = new IPEndPoint(IPAddress.Parse(GetLocalIPAddress()), 55000); // uso loopback o anche indirizzo di 192.168.1.73
 
             txtIpAdd.Text = localEndPointAutomated.Address.ToString();
+            txtDestPort.Text = localEndPointAutomated.Port.ToString();
            
             Thread t1 = new Thread(new ParameterizedThreadStart(SocketReceive)); // Parametizzazione di un thread.
             t1.Start(localEndPointAutomated);
