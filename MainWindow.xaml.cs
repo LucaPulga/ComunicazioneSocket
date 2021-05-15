@@ -76,7 +76,7 @@ namespace ComunicazioneSocket
                         // Ricezione
                         bytes = t.Receive(byteRicevuti, byteRicevuti.Length, 0);
                         // Prendo tutti i caratteri che ho messo dentro al vettore di byte, per ogni carattere e  li concateno all0interno del messaggio.
-                        message += Encoding.ASCII.GetString(byteRicevuti, 0, bytes);
+                        message = Encoding.ASCII.GetString(byteRicevuti, 0, bytes);
 
                         // Gestione elementi grafici difficoltosa e non si può fare così
                         // lblRicezione.Content = message;
